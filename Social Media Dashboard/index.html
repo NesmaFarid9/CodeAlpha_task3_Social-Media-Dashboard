@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- bootstrab icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styleSocial.css">
+    <title>Social Media</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <div class="menu-icons" onclick="openSidebar()">
+                <span class="material-icons-outlined">
+                    menu
+                </span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">
+                    search
+                </span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">
+                    notifications
+                </span>
+                <span class="material-icons-outlined">
+                    mail
+                </span>
+                <span class="material-icons-outlined">
+                    account_circle
+                </span>
+                <span class="material-icons-outlined" id="darkModeToggle">
+                    brightness_4
+                </span>
+
+            </div>
+        </header>
+        <!--end header -->
+        <!-- sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span>LOGO</span>
+                </div>
+                <span id="close" class="material-icons-outlined" onclick="closeSidebar()">
+                    close
+                </span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item" id="dashboard">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">dashboard</span><span
+                            class="whait-color">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="leaderboard">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">leaderboard</span><span
+                            class="whait-color">Leaderboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="forum">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">forum</span><span
+                            class="whait-color">Forum</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="support">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">support</span><span
+                            class="whait-color">Support</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="messages">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">messages</span><span
+                            class="whait-color">Messages</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="reports">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">reports</span><span
+                            class="whait-color">Reports</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item" id="settings">
+                    <a href="#">
+                        <span class="material-icons-outlined whait-color">settings</span><span
+                            class="whait-color">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- end sidebar -->
+        <!-- main -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>LIKES</h2>
+                        <span class="material-icons-outlined">thumb_up</span>
+                    </div>
+                    <h1>4.021</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>SUBSCRIBERS</h2>
+                        <span class="material-icons-outlined">subscriptions</span>
+                    </div>
+                    <h1>8.731</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>Followers</h2>
+                        <span class="material-icons-outlined">groups</span>
+                    </div>
+                    <h1>3.841</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>MESSAGES</h2>
+                        <span class="material-icons-outlined">forum</span>
+                    </div>
+                    <h1>1.96</h1>
+                </div>
+            </div>
+            <div class="grid-main">
+                <div class="products">
+                    <div class="product-card">
+                        <h2 class="product-description">Latest Updates</h2>
+                        <p class="text-secondary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque similique animi dolorem
+                            praesentium? Commodi nihil repellat porro ullam quibusdam temporibus aliquam eum magni
+                            ratione
+                            quas,
+                            doloribus unde perferendis molestias ducimus.
+                        </p>
+                        <button type="button" class="product-btn">
+                            <span class="material-icons-outlined">add</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <div class="product">
+                        <div class="social-one">
+                            <div class="product-icon background-red">
+                                <i class="bi bi-twitter"></i>
+                            </div>
+                            <h1 class="text-red">+274</h1>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="social-two">
+                            <div class="product-icon background-green">
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                            <h1 class="text-green">+352</h1>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="social-three">
+                            <div class="product-icon background-orange">
+                                <i class="bi bi-facebook"></i>
+                            </div>
+                            <h1 class="text-orange">-126</h1>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="social-four">
+                            <div class="product-icon background-blue">
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                            <h1 class="text-blue">+102</h1>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- end main -->
+
+</body>
+<script src="scriptSocial.js"></script>
+</body>
+
+</html>

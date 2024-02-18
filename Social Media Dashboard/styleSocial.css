@@ -1,0 +1,506 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(247, 246, 252);
+    color: rgb(70, 71, 81);
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: auto;
+}
+
+.material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 30px;
+}
+
+.text-secondary {
+    color: rgb(70, 71, 81);
+}
+
+.text-blue {
+    color: #00b3d4;
+}
+
+.background-blue {
+    background-color: #00b3d4;
+}
+
+.text-red {
+    color: #8d8900;
+}
+
+.background-red {
+    background-color: #8d8900;
+}
+
+.text-green {
+    color: #3f6c8a;
+}
+
+.background-green {
+    background-color: #3f6c8a;
+}
+
+.text-orange {
+    color: #ff7a15;
+}
+
+.background-orange {
+    background-color: #ff7a15;
+}
+
+.whait-color {
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main";
+    height: 100vh;
+}
+
+/* start header */
+.header {
+    grid-area: header;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgb(0, 0, 0, 0.2);
+}
+
+.menu-icons {
+    display: none;
+    cursor: pointer;
+}
+
+.header-left span:hover,
+.header-right span:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+/* end header */
+/* start sidebar */
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #192030;
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    transition: all 0.5s;
+    --webkit-transition: all 0.5s;
+}
+
+.sidebar-brand span {
+    margin-left: 1px;
+    margin-top: 100px;
+}
+
+.sidebar-title span {
+    margin-top: 20px;
+    margin-left: 2px;
+    margin-top: 20px;
+}
+
+.sidebar-title span:hover {
+    cursor: pointer;
+}
+
+#mood-logo {
+    margin-top: 1px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.sidebar-brand span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#close {
+    margin-left: 30px;
+    margin-top: 39px;
+
+}
+
+.sidebar-title>span {
+    display: none;
+}
+
+.sidebar-brand {
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.sidebar-brand>.material-icons-outlined {
+    font-size: 50px;
+}
+
+.sidebar-list {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+}
+
+
+.sidebar-list-item {
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
+}
+
+#dashboard span {
+    margin-right: 8px;
+}
+
+#leaderboard span {
+    margin-right: 8px;
+}
+
+#forum span {
+    margin-right: 8px;
+}
+
+#support span {
+    margin-right: 8px;
+}
+
+#messages span {
+    margin-right: -20px;
+}
+
+#reports span {
+    margin-right: -20px;
+}
+
+#settings span {
+    margin-right: 12px;
+}
+
+.sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.sidebar-list-item>a {
+    text-decoration: none;
+    color: rgb(180, 184, 244);
+}
+
+.sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+}
+
+/* end sidebar */
+/* start main */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+}
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    color: rgb(225, 255, 255);
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.card-inner {
+    flex-wrap: wrap;
+}
+
+.card:first-child {
+    background-color: #8d8900;
+}
+
+.card:nth-child(2) {
+    background-color: #3f6c8a;
+}
+
+.card:nth-child(3) {
+    background-color: #ff7a15;
+}
+
+.card:nth-child(4) {
+    background-color: #00b3d4;
+}
+
+.card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-inner>span {
+    font-size: 50px;
+}
+
+.card:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 9px;
+}
+
+.product-btn:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product-card {
+    height: 300px;
+    width: 640px;
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.product-description {
+    padding-top: 50px;
+}
+
+.product-btn {
+    background-color: #00b3d4;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+
+    border-style: none;
+    border-radius: 30px;
+}
+
+.product-btn>.material-icons-outlined {
+    font-size: 50px;
+}
+
+.social-media {
+    height: 300px;
+    padding: 10px;
+
+}
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+    margin-top: 1px;
+    gap: 20px;
+    width: 600px;
+    height: 50px;
+}
+
+.social-one {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+.social-one:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.social-two {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+.social-two:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.social-three {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+.social-three:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.social-four {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+.social-four:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.product-icon {
+    color: rgb(255, 255, 255);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.product-icon>.bi {
+    font-size: 25px;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* end main */
+
+/* media queries */
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas:
+            "header"
+            "main";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .menu-icons {
+        display: inline;
+    }
+
+    .sidebar-title>span {
+        display: inline;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .main-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (max-width: 567px) {
+    .header-left {
+        display: none;
+
+    }
+
+}
+
+/* dark mood */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    /* --background-color: #333;  */
+    --background-color: #2b2727;
+    --text-color: #fff;
+
+}
+
+body.dark-mode .product-description {
+    color: #00b3d4;
+}
+
+body.dark-mode #sidebar {
+    background-color: #333;
+
+}
+
+body.dark-mode .header {
+    /* color: rgb(255, 255, 255); */
+    background-color: #333;
+    box-shadow: 0 6px 7px -4px #7c7777;
+
+}
+
+body.dark-mode .product-card {
+    background-color: #363535;
+
+}
+
+body.dark-mode .text-secondary {
+    color: white;
+}
+
+body.dark-mode .social-one,
+body.dark-mode .social-two,
+body.dark-mode .social-three,
+body.dark-mode .social-four {
+    background-color: #363535;
+}
